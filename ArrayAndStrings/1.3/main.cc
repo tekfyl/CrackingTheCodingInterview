@@ -30,13 +30,11 @@ char c; string s;
 int main(){
     ios_base::sync_with_stdio(false);
     cin >> s;
-    for(i=0; ; i++){
-        c = s[i];
-        n = s.size();
-        if(i == n-1) break;
-        rep(j,n-1){
-            if(s[j] == s[j+1]){
-                s.erase(j+1);
+    for(i=0; i<s.size(); i++){
+        if(s[i] != '\0'){
+            s[t++] = s[i];
+            for(j=i+1;j<s.size();j++){
+                if(s[i] == s[j]) s[j] = '\0';
             }
         }
     }
