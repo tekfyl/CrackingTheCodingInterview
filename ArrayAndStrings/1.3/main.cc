@@ -30,15 +30,17 @@ char c; string s;
 int main(){
     ios_base::sync_with_stdio(false);
     cin >> s;
-    for(i=0; i<s.size(); i++){
+    n = s.size();
+    for(i=0; i<n; i++){
         if(s[i] != '\0'){
             s[t++] = s[i];
-            for(j=i+1;j<s.size();j++){
+            for(j=i+1;j<n;j++){
                 if(s[i] == s[j]) s[j] = '\0';
             }
         }
     }
-    cout << s;
+    s[t] = '\0';
+    for(i=0; i<t; i++) cout << s[i];
     //cout<<"\n"<<"Execution time : "<<tick()<<"\n";
     return 0;
 }
