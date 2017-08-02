@@ -1,0 +1,2 @@
+This will work, but if two pop / peeks are performed back-to-back, we’re needlessly moving elements. We can implement a “lazy” approach where we let the elements sit in s2.
+s1 will thus be ordered with the newest elements on the top, while s2 will have the oldest elements on the top. We push the new elements onto s1, and peek and pop from s2. When s2 is empty, we’ll transfer all the elements from s1 onto s2, in reverse order.
