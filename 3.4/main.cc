@@ -35,3 +35,5 @@ int main(){
     cout << "Total Steps : " << ct << endl;
     return 0;
 }
+
+// Just replace the Source, Aux and Target with Stacks.
